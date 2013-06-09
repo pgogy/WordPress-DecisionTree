@@ -1,0 +1,32 @@
+.library{
+	display:none;
+}
+
+.choice p{
+	border:2px solid black;
+	padding:20px;
+	margin:20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.choice div{
+	padding:20px;
+}
+
+.choice div span{
+	margin-right:20px;
+	padding:10px;
+	cursor:pointer;
+	color:#fff;
+	background:#000;
+	cursor:hand;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.hide{
+	display:none;
+}

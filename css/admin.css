@@ -1,0 +1,212 @@
+.hide{
+
+	display:none;
+
+}
+
+.show{
+
+	display:block;
+
+}
+
+.decisiontreeimage{
+	height:50px;
+	width:50px;
+	margin:5px;
+}
+
+.dataholder{
+	float:left;
+	position:relative;
+	width:100%;
+	clear:both;
+	border:1px solid #ddd;
+	background:#EFF1F7;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	height:auto;
+	margin-bottom:20px;
+}
+
+.dataholder textarea{
+	width:100%;
+}
+
+.dataholder span{
+	margin:5px;
+}
+
+.dataholder h2{
+	margin:5px;
+	display:inline-block;
+}
+
+#decisions div.prompt{
+	float:left;
+	position:relative;
+	width:100%;
+	clear:both;
+	border:1px solid #ddd;
+	background:#EFF1F7;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	height:auto;
+	margin-bottom:20px;
+}
+
+#decisions div.prompt div, #decisions div.prompt span, #decisions div.prompt p{
+	margin:20px 0px 0px 20px;
+}
+
+#decisions div.prompt p.title, #decisions div.prompt div p, #decisions div.prompt p.delete span{
+	margin-left:5px;
+}
+
+#decisions div.prompt p.delete{
+	margin-left:0px;
+}
+
+#decisions div.prompt p.delete span, #decisions div.prompt a, #decisions div.prompt div.choices_menu p{
+	border:1px solid #ddd;
+	background:#fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	font-weight:bold;
+}
+
+#decisions div.prompt div.choices_menu p{
+	width:20%;
+	text-align:center;
+}
+
+#decisions div.prompt p.delete span:first-child{
+	color:red;
+}
+
+#decisions div.prompt div div{
+	margin:0px;
+}
+
+#decisions div.prompt textarea{
+	width:95%;
+	height:50px;
+}
+
+.choices{
+	float:left;
+	position:relative;
+}
+
+.choices div{
+	float:left;
+	position:relative;
+}
+
+.title{
+	display:inline-block;
+}
+
+p.delete{
+	clear:both;
+}
+
+#decisions div.prompt div.choices{
+	margin-top:10px;
+}
+
+#decisions div.prompt div.choices div{
+	border:1px solid #eee;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:7px;
+	font-size:100%;
+	background:#E0E1E9;
+	margin-right:5px;
+}
+
+#decisions div.prompt div.choices div div{
+	border:none;
+}
+
+.option p{
+	display:inline;
+}
+
+.option span{
+	padding:5px;
+	margin:5px;
+	border:2px solid #000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background:#000;
+	color:#fff;
+	cursor:pointer;
+	cursor:hand;
+}
+
+span.expand{
+	font-size:200%;
+	font-weight:bold;
+}
+
+.prompt p.title{
+	font-size:200%;
+	margin:0px;
+	padding:0px;
+}
+
+.option_form input, .option_form select, .option_form a{
+	display:block;
+	margin:10px 0px;
+	padding:10px 0px;
+}
+
+.option_form a{
+	cursor:pointer;
+	cursor:hand;
+}
+
+.prompt p.delete{
+	margin:20px 0px;
+	padding:20px;
+}
+
+.title, .choices_menu p, .delete, .expand{
+	cursor:pointer;
+	cursor:hand;
+}
+
+.decision{
+	clear:both;
+	border:1px solid #ddd;
+	background:#fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding:10px;
+	font-weight:bold;
+	width:11%;
+	text-align:center;
+}
+
+.decision a{
+	cursor:pointer;
+	cursor:hand;
+}	
+
+p.delete span{
+
+	margin-right: 20px;
+
+}
+
+.option_form{
+	margin-top:40px;
+}
