@@ -116,15 +116,22 @@ function decisiontree_edit_desc(){
 			
 				if($data!=""){
 				
+					$names = array();
+				
+					foreach($data as $index => $choice){
+
+						array_push($names, array($choice->id, $choice->name));
+
+					}
+				
 					foreach($data as $index => $choice){
 					
 						?>
 						<div class="prompt" id="<?PHP echo $choice->id; ?>">
 							<span class="expand" onclick="javascript:expand_choice(this)">+</span>
-							<p class="title" onclick="javascript:edit_title(this)"><?PHP echo $choice->name; ?></p>
-							<form class="hide">	
-								<input type="text" value="" /><a onclick="javascript:save_text(this)">Change</a>
-							</form>
+							<p class="title" onclick="javascript:edit_title(this)"><?PHP echo $choice->name; ?></p>	
+							<input type="text" value="" />
+							<a onclick="javascript:save_text(this)">Change</a>
 							<div>
 								<p>Text to appear for this choice</p>
 								<textarea><?PHP echo $choice->html; ?></textarea>
@@ -160,13 +167,26 @@ function decisiontree_edit_desc(){
 														
 															echo "<option value='null'>Choose</option>";
 															
+															$counter = 0;
+															
 															foreach($data as $optindex => $optvalue){
 															
 																echo "<option value='" . $optindex . "' "; 
 																if($option[1]==$optindex){
 																	echo " selected ";
 																}
-																echo ">" . $optindex . ". " . $option[0] . "</option>";
+																echo ">" . $optindex . ". " . $names[$counter++][1] . "</option>";
+															
+															}
+														
+														}else{
+														
+															echo "<option value='null'>Choose</option>";
+															
+															for($x=0;$x<count($names);$x++){
+															
+																echo "<option value='" . $names[$x][0] . "' "; 
+																echo ">" . $optindex . ". " . $names[$x][1] . "</option>";
 															
 															}
 														
@@ -205,9 +225,8 @@ function decisiontree_edit_desc(){
 			<div class="prompt" id="0">
 				<span class="expand" onclick="javascript:expand_choice(this)">+</span>
 				<p class="title" onclick="javascript:edit_title(this)">Choice</p>
-				<form class="hide">
-					<input type="text" value="" /><a onclick="javascript:save_text(this)">Change</a>
-				</form>
+				<input type="text" value="" />
+				<a onclick="javascript:save_text(this)">Change</a>
 				<div>
 					<p>Text to appear for this choice</p>
 					<textarea></textarea>

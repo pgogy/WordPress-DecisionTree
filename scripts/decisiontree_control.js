@@ -23,6 +23,7 @@ function create_data(){
 					.next()
 					.next()
 					.next()
+					.next()
 					.children()
 					.last()
 					.prev()
@@ -272,8 +273,6 @@ function edit_title(obj){
 
 function edit_option_title(obj){
 
-	console.log("here");
-
 	jQuery(obj)
 		.toggleClass("hide",1);
 	
@@ -293,8 +292,6 @@ function edit_option_title(obj){
 }			
 		
 function save_text(obj){
-			
-	console.log(jQuery(obj).prev().val());
 			
 	if(jQuery(obj).prev().val()!=""){
 	
@@ -527,4 +524,3 @@ function add_img_html(obj){
 		.val("<img src='" + obj.src + "' />");
 
 }
-
