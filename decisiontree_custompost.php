@@ -37,7 +37,7 @@
 		'rewrite' => false,
 		'description' => 'A Collection of terms which which to search for resources with',
 		'supports' => array('title'),
-		'taxonomies' => array('category')
+		'taxonomies' => array('category', 'post_tag')
 	  ); 
 	  register_post_type('decisiontree',$args);
 

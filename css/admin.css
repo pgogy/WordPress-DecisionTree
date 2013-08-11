@@ -100,11 +100,16 @@
 .choices{
 	float:left;
 	position:relative;
+	width:100%;
+	clear:both;
+	margin-top:20px;
 }
 
 .choices div{
 	float:left;
 	position:relative;
+	width:auto;
+	border:red 1px solid;
 }
 
 .title{
@@ -209,4 +214,5 @@ p.delete span{
 
 .option_form{
 	margin-top:40px;
+	clear:left;
 }

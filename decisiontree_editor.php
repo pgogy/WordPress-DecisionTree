@@ -50,14 +50,14 @@ function decisiontree_edit_desc(){
 		
 		echo "<div class='dataholder'>";
 		
-		if(count($images)!=0){
-			
-			echo '<span class="expand" onclick="javascript:expand_choice(this)">+</span>';
-			echo "<h2>Add an image</h2>";
-			echo "<div class='hide'>";
-			
-			echo "<p>Click on an image to get the HTML</p>";
-		
+		echo '<span class="expand" onclick="javascript:expand_choice(this)">+</span>';
+		echo "<h2>Add an image</h2>";
+		echo "<div class='hide'>";
+
+		if(count($images)!=0){	
+
+			echo "<p>Click on an image to get the HTML</p>";	
+
 			foreach($images as $image){
 			
 				echo " <img class='decisiontreeimage' alt='" . $image->post_title . "' title='" . $image->post_title . "' onclick='javascript:add_img_html(this);' src='" . $image . "' /> ";
@@ -65,11 +65,15 @@ function decisiontree_edit_desc(){
 			}
 			
 			echo "<textarea id='imghtml'></textarea>";
-			
-			echo "</div>";
-			
+
+		}else{
+
+			echo "<p>No images found</p>";
+
 		}
-		
+			
+		echo "</div>";
+	
 		echo "</div>";
 		
 		$args = array(
@@ -130,7 +134,7 @@ function decisiontree_edit_desc(){
 						<div class="prompt" id="<?PHP echo $choice->id; ?>">
 							<span class="expand" onclick="javascript:expand_choice(this)">+</span>
 							<p class="title" onclick="javascript:edit_title(this)"><?PHP echo $choice->name; ?></p>	
-							<input type="text" value="" />
+							<input type="text" value="" size="100" />
 							<a onclick="javascript:save_text(this)">Change</a>
 							<div>
 								<p>Text to appear for this choice</p>
@@ -142,10 +146,7 @@ function decisiontree_edit_desc(){
 							<div>
 								<h2>Options</h2>
 								<div class="choices_menu">
-									<p onclick="javascript:edit_title(this)">Click to add an option</p>
-									<form class="hide">
-										<input type="text" value="New option" /><a onclick="javascript:save_option(this)">Add</a>
-									</form>
+									<input type="text" value="New option" size="100" /><a onclick="javascript:save_option(this)">Add</a>
 									<div class="choices"><?PHP
 									
 										$total = count($choice->choices);
@@ -159,8 +160,8 @@ function decisiontree_edit_desc(){
 													<span onclick="javascript:right_choice(this)">></span>
 													<span onclick="javascript:delete_choice(this)">X</span>
 												</div>
-												<form class="option_form hide">
-													<input type="text" value="" />
+												<div class="option_form hide">
+													<input type="text" value="" size="100" />
 													<select class="route"><?PHP
 													
 														if($total!=1){
@@ -194,7 +195,7 @@ function decisiontree_edit_desc(){
 													
 													?></select>
 													<a onclick="javascript:save_route_choice(this)">Change</a>
-												</form>
+												</div>
 											</div><?PHP
 										
 										}
@@ -225,7 +226,7 @@ function decisiontree_edit_desc(){
 			<div class="prompt" id="0">
 				<span class="expand" onclick="javascript:expand_choice(this)">+</span>
 				<p class="title" onclick="javascript:edit_title(this)">Choice</p>
-				<input type="text" value="" />
+				<input type="text" value="" size="100" />
 				<a onclick="javascript:save_text(this)">Change</a>
 				<div>
 					<p>Text to appear for this choice</p>
@@ -237,10 +238,7 @@ function decisiontree_edit_desc(){
 				<div>
 					<h2>Options</h2>
 					<div class="choices_menu">
-						<p onclick="javascript:edit_title(this)">Click to add an option</p>
-						<form class="hide">
-							<input type="text" value="New option" /><a onclick="javascript:save_option(this)">Add</a>
-						</form>
+						<input type="text" value="New option" size="100" /><a onclick="javascript:save_option(this)">Add</a>
 						<div class="choices">
 						</div>
 					</div>

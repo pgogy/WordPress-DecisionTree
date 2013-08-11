@@ -28,7 +28,7 @@ function create_data(){
 					.last()
 					.prev()
 					.val();	
-					
+
 				set.colour = jQuery(value)
 					.children()
 					.first()
@@ -346,7 +346,7 @@ function save_option(obj){
 		name = "Option name"
 	
 	}
-	
+	/*
 	jQuery(obj)
 		.parent()
 		.toggleClass("show",0)
@@ -358,7 +358,8 @@ function save_option(obj){
 		.children()
 		.first()	
 		.toggleClass("hide",0);	
-		
+	*/
+	
 	if(choices_children()!=1){
 	
 		state = "";
@@ -378,7 +379,6 @@ function save_option(obj){
 	html += '</select><a onclick="javascript:save_route_choice(this)">Change</a></form></div>';	
 		
 	jQuery(obj)
-		.parent()
 		.parent()
 		.children()
 		.last()
@@ -483,10 +483,12 @@ function add_decision(){
 
 }
 
-window.addEventListener("load", function load(event){
-		attach_form_action();
-	}
-);
+if (window.addEventListener) {
+  window.addEventListener("load", attach_form_action, false);
+}
+else if (window.attachEvent) {
+  window.attachEvent("onload", attach_form_action );
+} 
 
 function attach_form_action(){
 	jQuery("#post")
