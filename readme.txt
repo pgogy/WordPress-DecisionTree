@@ -2,8 +2,8 @@
 Contributors: pgogy
 Tags: decision, decision tree, choices, routes
 Requires at least: 3.0.0
-Tested up to: 3.5
-Stable tag: 0.1
+Tested up to: 4.5
+Stable tag: 0.2
 
 Allows a user to create a decision tree which allows a series of questions and choices to be worked through.
 

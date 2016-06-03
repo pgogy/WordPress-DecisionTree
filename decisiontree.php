@@ -3,7 +3,7 @@
 	/*
 	Plugin Name: Decision Tree
 	Description: Displays a decision tree on a WordPress Site
-	Version: 0.1
+	Version: 0.2
 	Author: pgogy
 	Author URI: http://www.pgogy.com
 	*/

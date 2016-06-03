@@ -1,6 +1,12 @@
 <?PHP
 
-	add_action('init', 'decisiontree_custom_page_type_create');
+class decisiontree_custompost{
+
+	function __construct(){	
+
+		add_action('init', array($this,'decisiontree_custom_page_type_create'));
+	
+	}
 
 	function decisiontree_custom_page_type_create() 
 	{
@@ -42,5 +48,9 @@
 	  register_post_type('decisiontree',$args);
 
 	}
+	
+}
+
+$decisiontree_custompost = new decisiontree_custompost;
 
 ?>
